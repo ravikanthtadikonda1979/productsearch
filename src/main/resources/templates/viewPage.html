@@ -1,0 +1,115 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/products}" th:object="${form}" method="post">
+    <table border="1">
+
+        <tr>
+            <td><label th:text="Sort" /></td>
+            <td><select  th:field="*{Sort}">
+                <option value=""> </option>
+                <option value="salesrank">salesrank</option>
+                <option value="relevancerank">relevancerank</option>
+                <option value="featured">featured</option>
+                <option value="price">price</option>
+                <option value="-price">-price</option>
+                <option value="reviewrank">reviewrank</option>
+                <option value="reviewscore">reviewscore</option>
+                <option value="popularityrank">popularityrank</option>
+                <option value="popularity-rank">popularity-rank</option>
+                <option value="reviewrank">customerReviewRank</option>
+                <option value="review-rank">-review rank</option>
+                <option value="-unit-sales">-unit sales</option>
+                <option value="mfg-age-min">mfg-age-min</option>
+                <option value="-mfg-age-min">-mfg-age-min</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label th:text="operation" /></td>
+            <td><input type="text" th:field="*{operation}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="KeyWords" /></td>
+            <td><input type="text" th:field="*{KeyWords}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="SearchIndex" /></td>
+            <td><select th:field="*{SearchIndex}" >
+                <option value="All">All</option>
+                <option value="Wine">Wine</option>
+                <option value="Wireless">Wireless</option>
+                <option value="ArtsAndCrafts">ArtsAndCrafts</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Jewelry">Jewelry</option>
+                <option value="MobileApps">MobileApps</option>
+                <option value="Photo">Photo</option>
+                <option value="Shoes">Shoes</option>
+                <option value="KindleStore">KindleStore</option>
+                <option value="Automotive">Automotive</option>
+                <option value="Vehicles">Vehicles</option>
+                <option value="Pantry">Pantry</option>
+                <option value="MusicalInstruments">MusicalInstruments</option>
+                <option value="DigitalMusic">DigitalMusic</option>
+                <option value="GiftCards">GiftCards</option>
+                <option value="FashionBaby">FashionBaby</option>
+                <option value="FashionGirls">FashionGirls</option>
+                <option value="GourmetFood">GourmetFood</option>
+                <option value="HomeGarden">HomeGarden</option>
+                <option value="MusicTracks">MusicTracks</option>
+                <option value="UnboxVideo">UnboxVideo</option>
+                <option value="FashionWomen">FashionWomen</option>
+                <option value="VideoGames">VideoGames</option>
+                <option value="FashionMen">FashionMen</option>
+                <option value="Kitchen">Kitchen</option>
+                <option value="Video">Video</option>
+                <option value="Software">Software</option>
+                <option value="Beauty">Beauty</option>
+                <option value="Grocery">Grocery</option>
+                <option value="FashionBoys">FashionBoys</option>
+                <option value="Industrial">Industrial</option>
+                <option value="PetSupplies">PetSupplies</option>
+                <option value="OfficeProducts">OfficeProducts</option>
+                <option value="Magazines">Magazines</option>
+                <option value="Watches">Watches</option>
+                <option value="Luggage">Luggage</option>
+                <option value="OutdoorLiving">OutdoorLiving</option>
+                <option value="Toys">Toys</option>
+                <option value="SportingGoods">SportingGoods</option>
+                <option value="PCHardware">PCHardware</option>
+                <option value="Movies">Movies</option>
+                <option value="Books">Books</option>
+                <option value="Collectibles">Collectibles</option>
+                <option value="Handmade">Handmade</option>
+                <option value="VHS">VHS</option>
+                <option value="MP3Downloads">MP3Downloads</option>
+                <option value="HomeAndBusinessServices">HomeAndBusinessServices</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Tools">Tools</option>
+                <option value="Baby">Baby</option>
+                <option value="Apparel">Apparel</option>
+                <option value="Marketplace">Marketplace</option>
+                <option value="DVD">DVD</option>
+                <option value="Appliances">Appliances</option>
+                <option value="Music">Music</option>
+                <option value="LawnAndGarden">LawnAndGarden</option>
+                <option value="WirelessAccessories">WirelessAccessories</option>
+                <option value="Blended">Blended</option>
+                <option value="HealthPersonalCare">HealthPersonalCare</option>
+                <option value="Classical">Classical</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label th:text="Timestamp" /></td>
+            <td><input type="text" th:field="*{Timestamp}" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
