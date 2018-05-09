@@ -1,8 +1,9 @@
-package amazon.productsearch.productsearch;
+package com.amazon.productsearch.productsearch;
 
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 
+import com.amazon.productsearch.ProductController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
