@@ -1,16 +1,12 @@
-target
-.mvn
-.ebextensions
-
-
-### IntelliJ IDEA ###
+target/
+.mvn/
+.ebextensions/
 .idea
 *.iws
 *.iml
 *.ipr
-
 Users
-applocation.jar
+application.jar
 product-search.zip
 mvnw
 mvnw.cmd
