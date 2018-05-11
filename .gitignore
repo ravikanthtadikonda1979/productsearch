@@ -1,5 +1,6 @@
-target/
-.mvn/wrapper/maven-wrapper.jar
+target
+.mvn
+.ebextensions
 
 
 ### IntelliJ IDEA ###
@@ -8,6 +9,6 @@ target/
 *.iml
 *.ipr
 
-Users/
+Users
 applocation.jar
 product-search.zip

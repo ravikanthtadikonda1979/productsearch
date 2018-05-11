@@ -8,12 +8,14 @@
     <tr>
         <th>ASIN</th>
         <th>Item Name</th>
+        <th>Author</th>
         <th>Product Group</th>
         <th>Attributes</th>
     </tr>
     <tr th:each="item : ${items}">
         <td th:text="${item.asin}"></td>
         <td><a th:href="${item.detailPageURL}" th:text="${item.itemAttributes.title}"></a></td>
+        <td th:text="${item.itemAttributes.author}"></td>
         <td th:text="${item.itemAttributes.productGroup}"></td>
         <td><ul th:each="attribute : ${item.itemLinks.itemLink}"> <li><a th:href="${attribute.url}"><p th:text="${attribute.description}"></p></a></li></ul></td>
     </tr>

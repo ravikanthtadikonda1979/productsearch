@@ -16,7 +16,11 @@ import java.util.TreeMap;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
+import com.amazon.productsearch.environment.config.properties.ApplicationProperties;
+import com.amazon.productsearch.environment.config.properties.SpringConfiguration;
 import org.apache.commons.codec.binary.Base64;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SignedRequestsHelper {
     private static final String UTF8_CHARSET = "UTF-8";
@@ -24,9 +28,13 @@ public class SignedRequestsHelper {
     private static final String REQUEST_URI = "/onca/xml";
     private static final String REQUEST_METHOD = "GET";
 
-    private String endpoint = "webservices.amazon.co.uk"; // must be lowercase
-    private String awsAccessKeyId = "AKIAIXONRQ6TRKN5TPBQ";
-    private String awsSecretKey = "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";
+    ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+    ApplicationProperties properties = applicationContext.getBean(ApplicationProperties.class);
+
+    private String endpoint = properties.getEndpoint(); // must be lowercase
+    private String awsAccessKeyId = properties.getAwsAccessKeyId();
+    private String awsSecretKey = properties.getAwsSecretKey();
+
 
     private SecretKeySpec secretKeySpec = null;
     private Mac           mac           = null;
@@ -40,6 +48,11 @@ public class SignedRequestsHelper {
     }
 
     public String sign(Map<String, String> params) {
+
+        System.out.println("awsAccessKeyId...."+awsAccessKeyId);
+        System.out.println("awsSecretKey...."+awsSecretKey);
+        System.out.println("endpoint...."+endpoint);
+
         params.put("AWSAccessKeyId", awsAccessKeyId);
         params.put("Timestamp", timestamp());
 
