@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.amazon.webservices.awsecommerceservice._2013_08_01.ItemSearchResponse;
+import com.amazon.webservices.awsecommerceservice.ItemSearchResponse;
 
 @RestController
 public class ProductController {
