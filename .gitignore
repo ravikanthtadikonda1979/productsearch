@@ -1,4 +1,5 @@
 target/
+src/main/java/com/amazon/webservices/awsecommerceservice/_2013_08_01
 .mvn/
 .ebextensions/
 .idea
